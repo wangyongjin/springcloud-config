@@ -1,0 +1,26 @@
+spring:
+  profiles: 
+    active:
+    - dev
+---
+server:
+  port: 8201
+spring:
+  profiles: dev
+  application:
+    name: chservicecloud-config-client     #对外曝光的微服务名称
+eureka:  #客户端注册进eureka服务列表
+  client:
+    service-url:
+      defaultZone: http://eureka-dev.com:7001/eureka/
+---
+server:
+  port: 8202
+spring:
+  profiles: test
+  application:
+    name: chservicecloud-config-client     #对外曝光的微服务名称
+eureka:  #客户端注册进eureka服务列表
+  client:
+    service-url:
+      defaultZone: http://eureka-test.com:7001/eureka/

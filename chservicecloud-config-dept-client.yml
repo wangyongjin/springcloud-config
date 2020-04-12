@@ -5,7 +5,6 @@ spring:
 ---
 server:
   port: 8001
-
 spring:
   profiles: dev
   application:
@@ -20,13 +19,11 @@ spring:
       min-idle: 6  #连接池最小的连接数
       initial-size: 6 #初始化的连接数
       max-idle: 6 #最大连接数
-      max-wait-millis: 200 #等待获取最大超时时间
-          
+      max-wait-millis: 200 #等待获取最大超时时间      
 mybatis:
   config-location: classpath:mybatis/mybatis-cfg.xml   #mybatis配置文件路径
   type-aliases-package: com.spring.springcloud.entity  #加载所有的实体类
   mapper-locations: classpath:mybatis/mapper/**/*.xml
-  
 eureka:  #客户端注册进eureka服务列表
   client:
     service-url:
@@ -34,17 +31,14 @@ eureka:  #客户端注册进eureka服务列表
   instance:
     instance-id: microservicecloud-dept8001-hystrix
     prefer-ip-address: true #显示ip地址
-    
 info:
   app.name: chservicecloud   #工程名称
   company.name: www.sp.com   #公司名称
   build.artifactId: $project.artifactId$  #调用父工程build
   build.version: $project.version$
-  
 ---
 server:
   port: 8002
-
 spring:
   profiles: test
   application:
@@ -59,13 +53,11 @@ spring:
       min-idle: 6  #连接池最小的连接数
       initial-size: 6 #初始化的连接数
       max-idle: 6 #最大连接数
-      max-wait-millis: 200 #等待获取最大超时时间
-          
+      max-wait-millis: 200 #等待获取最大超时时间       
 mybatis:
   config-location: classpath:mybatis/mybatis-cfg.xml   #mybatis配置文件路径
   type-aliases-package: com.spring.springcloud.entity  #加载所有的实体类
   mapper-locations: classpath:mybatis/mapper/**/*.xml
-  
 eureka:  #客户端注册进eureka服务列表
   client:
     service-url:
@@ -73,7 +65,6 @@ eureka:  #客户端注册进eureka服务列表
   instance:
     instance-id: microservicecloud-dept8001-hystrix
     prefer-ip-address: true #显示ip地址
-    
 info:
   app.name: chservicecloud   #工程名称
   company.name: www.sp.com   #公司名称
