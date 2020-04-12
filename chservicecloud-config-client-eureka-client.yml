@@ -2,16 +2,13 @@ spring:
   profiles: 
     active:
     - dev
-	
 ---
 server:
   port: 7001
-  
 spring:
   profiles: dev #开发模式
   application:
     name: chservicecloud-config-client-eureka-client
-	
 eureka:
   instance:
     hostname: eureka7001.com  #eureka的服务端的实例名称
@@ -20,16 +17,13 @@ eureka:
     fetch-registry: false #表示自己就是注册中心，就是维护服务实例的，不需要进行检索服务
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
-	  
 ---
 server:
   port: 7001
-  
 spring:
   profiles: test #开发模式
   application:
     name: chservicecloud-config-client-eureka-client
-	
 eureka:
   instance:
     hostname: eureka7001.com  #eureka的服务端的实例名称
@@ -38,5 +32,3 @@ eureka:
     fetch-registry: false #表示自己就是注册中心，就是维护服务实例的，不需要进行检索服务
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
-          
- 
